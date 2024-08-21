@@ -1,4 +1,6 @@
-﻿if(args.Length == 0)
+﻿using wc_tool;
+
+if (args.Length == 0)
 {
     Console.WriteLine("Welcome to this wc tool! Please provide arguments\n-c <file path>: prints the number of bytes in file");
     return;
@@ -6,12 +8,16 @@
 
 try
 {
-    if (args[0].Equals("-c"))
+    var argsParser = new ArgsParser();
+    var parsedArgs = argsParser.ParseArgs(args);
+
+    foreach(var arg in parsedArgs)
     {
-        var fileInfo = new FileInfo(args[1]);
-        Console.WriteLine($"Bytes in file: {fileInfo.Length}");
+        Console.WriteLine(arg.Run());
     }
+
 } catch(Exception ex)
 {
-    Console.WriteLine("Something went wrong");
+    Console.WriteLine("Something went wrong...");
+    Console.WriteLine(ex.Message);
 }

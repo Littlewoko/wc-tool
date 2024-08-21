@@ -18,6 +18,8 @@ public class ArgsParser : IArgsParser
 
             if (!function.StartsWith("-")) throw new ArgumentException("Failed to parse args. Argument had no matching function.");
 
+            if (i + 1 >= args.Length) throw new ArgumentException("Failed to parse args. No parameter provided for function");
+            
             string argument = args[++i];
             
             if (argument.StartsWith("-")) throw new ArgumentException("Failed to parse args. A function specifier cannot be used as an argument");

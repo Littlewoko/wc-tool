@@ -39,4 +39,12 @@ public class ArgsParserTests
 
         Assert.Throws<ArgumentException>(() => argsParser.ParseArgs(args));
     }
+
+    [Fact]
+    public void ParseArgsShouldThrowIfNotEnoughArgs()
+    {
+        string[] args = { "-c" };
+
+        Assert.Throws<ArgumentException>(() => argsParser.ParseArgs(args));
+    }
 }
