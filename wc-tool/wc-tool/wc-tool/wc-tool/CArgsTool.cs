@@ -8,13 +8,15 @@ namespace wc_tool;
 
 public class CArgsTool : IArgsTool
 {
-    public CArgsTool(string argument)
+    string _filePath;
+    public CArgsTool(string filePath)
     {
-
+        _filePath = filePath;
     }
 
     public string Run()
     {
-        throw new NotImplementedException();
+        var fileInfo = new FileInfo(_filePath);
+        return $"Bytes in {_filePath}: {fileInfo.Length}";
     }
 }
