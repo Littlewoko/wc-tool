@@ -7,25 +7,24 @@ using wc_tool;
 
 namespace wc_tool_test;
 
-public class CArgsToolTests
+public class LArgsToolTests
 {
     [Theory]
-    [InlineData("test.txt", 11)]
-    [InlineData("test2.txt", 36)]
-    public void RunShouldReturnBytesInFile(string path, int bytes)
+    [InlineData("test.txt", 1)]
+    [InlineData("test2.txt", 7)]
+    public void RunShouldReturnLinesInFile(string path, int lines)
     {
-        var cArgsTool = new CArgsTool(path);
+        var lArgsTool = new LArgsTool(path); 
+        var res = lArgsTool.Run();
 
-        var result = cArgsTool.Run();
-
-        Assert.Equal($"Bytes in {path}: {bytes}", result);
+        Assert.Equal($"Lines in {path}: {lines}", res);
     }
 
     [Fact]
     public void RunShouldThrowIfFileDoesNotExist()
     {
         var testFile = "test";
-        var cArgsTool = new CArgsTool(testFile);
+        var cArgsTool = new LArgsTool(testFile);
 
         Assert.Throws<FileNotFoundException>(() => cArgsTool.Run());
     }

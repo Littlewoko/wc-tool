@@ -24,9 +24,14 @@ public class ArgsParser : IArgsParser
             
             if (argument.StartsWith("-")) throw new ArgumentException("Failed to parse args. A function specifier cannot be used as an argument");
             
-            if(function.ToLower().Equals("-c"))
+            switch(function.ToLower())
             {
-                res.Add(new CArgsTool(argument));
+                case "-c":
+                    res.Add(new CArgsTool(argument));
+                    break;
+                case "-l":
+                    res.Add(new LArgsTool(argument));
+                    break;
             }
         }
 

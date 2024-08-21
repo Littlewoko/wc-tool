@@ -11,10 +11,12 @@ public class ArgsParserTests
         argsParser = new ArgsParser();
     }
 
-    [Fact]
-    public void ParseArgsShouldMapCFunctionToArgsTool()
+    [Theory]
+    [InlineData("-c")]
+    [InlineData("-l")]
+    public void ParseArgsShouldMapIFunctionToArgsTool(string functionLetter)
     {
-        string[] args = { "-c", "test.txt" };
+        string[] args = { functionLetter, "test.txt" };
 
         var parsedArgs = argsParser.ParseArgs(args);
 
