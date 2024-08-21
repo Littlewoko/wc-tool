@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wc-tool", "wc-tool\wc-tool.csproj", "{70709092-42CD-4692-9544-CB192B8FC4C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wc-tool", "wc-tool\wc-tool.csproj", "{70709092-42CD-4692-9544-CB192B8FC4C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wc-tool-test", "wc-tool-test\wc-tool-test.csproj", "{1C517C7E-4465-4757-BD46-E4D43AB582C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{70709092-42CD-4692-9544-CB192B8FC4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70709092-42CD-4692-9544-CB192B8FC4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70709092-42CD-4692-9544-CB192B8FC4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C517C7E-4465-4757-BD46-E4D43AB582C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C517C7E-4465-4757-BD46-E4D43AB582C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C517C7E-4465-4757-BD46-E4D43AB582C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C517C7E-4465-4757-BD46-E4D43AB582C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
