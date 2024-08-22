@@ -32,6 +32,9 @@ public class ArgsParser : IArgsParser
                 case "-l":
                     res.Add(new LArgsTool(argument));
                     break;
+                case "-w":
+                    res.Add(new WArgsTool(argument));
+                    break;
             }
         }
 

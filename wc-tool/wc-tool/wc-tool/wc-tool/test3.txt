@@ -1,0 +1,5 @@
+words,jnd, sdc    sdcdv, wefwefwef,,,,, wef
+
+bsv.asdc .sdf
+
+wdc,, 
