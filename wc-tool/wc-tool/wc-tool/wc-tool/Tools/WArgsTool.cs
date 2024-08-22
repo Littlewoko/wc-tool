@@ -10,7 +10,7 @@ namespace wc_tool;
 public class WArgsTool : IArgsTool
 {
     private readonly string _filePath;
-    public WArgsTool(string filePath) 
+    public WArgsTool(string filePath)
     {
         _filePath = filePath;
     }
@@ -20,9 +20,9 @@ public class WArgsTool : IArgsTool
         var fileLines = File.ReadAllLines(_filePath);
 
         var numberOfWords = 0;
-        foreach (var line in fileLines) 
+        foreach (var line in fileLines)
         {
-            if (String.IsNullOrEmpty(line)) continue;
+            if (string.IsNullOrEmpty(line)) continue;
 
             var pattern = @"[\s,.]+"; ;
             var seperatedWords = Regex.Replace(line, pattern, " ");
